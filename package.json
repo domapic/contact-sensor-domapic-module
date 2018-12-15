@@ -13,13 +13,13 @@
   },
   "dependencies": {
     "domapic-service": "1.0.0-alpha.4",
-    "request": "2.88.0",
-    "request-promise": "4.2.2"
+    "gpio-in-domapic": "1.0.0"
   },
   "devDependencies": {
     "coveralls": "3.0.2",
     "narval": "2.2.1",
-    "mockery": "2.1.0"
+    "request": "2.88.0",
+    "request-promise": "4.2.2"
   },
   "files": [
     "/lib",
