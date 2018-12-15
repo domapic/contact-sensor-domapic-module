@@ -12,7 +12,7 @@
 
 ## Intro
 
-This package starts a Domapic Module that with ability called "contactSensor" that handles a GPIO in "in" mode. It is intended to be used in a Raspberry Pi or any other system supporting the [onoff][onoff-url] library, such as C.H.I.P. or BeagleBone.
+This package starts a Domapic Module with an ability called "contactSensor" that handles a GPIO in "in" mode. It is intended to be used in a Raspberry Pi or any other system supporting the [onoff][onoff-url] library, such as C.H.I.P. or BeagleBone.
 
 It can be used alone, but also can be connected to a [Domapic Controller][domapic-controller-url] to get the most out of it.
 
