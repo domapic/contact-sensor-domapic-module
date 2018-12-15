@@ -17,8 +17,7 @@
   },
   "devDependencies": {
     "coveralls": "3.0.2",
-    "narval": "2.2.1",
-    "mockery": "2.1.0"
+    "narval": "2.2.1"
   },
   "files": [
     "/lib",
