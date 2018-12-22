@@ -1,0 +1,24 @@
+[
+  {
+    "pluginPackageName": "homebridge-domapic-plugin",
+    "config": {
+      "accessories": [
+        {
+          "accessory": "ContactSensor",
+          "name": "Contact sensor",
+          "characteristics": [
+            {
+              "characteristic": "ContactSensorState",
+              "get": {
+                "ability": "contactSensor"
+              },
+              "notify": {
+                "ability": "contactSensor"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

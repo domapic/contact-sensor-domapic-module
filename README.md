@@ -61,7 +61,7 @@ Domapic modules are intended to be used through Domapic Controller, but can be u
 
 ### Rest API
 
-When the server is started, you can browse to the provided Swagger interface to get all the info about the api resources.  Apart of all api methods common to all [Domapic Services][domapic-service-url], the server provides one [_Domapic Ability_][domapic-service-abilities-url] for getting the state of the sendor, which generates one extra API resource:
+When the server is started, you can browse to the provided Swagger interface to get all the info about the api resources.  Apart of all api methods common to all [Domapic Services][domapic-service-url], the server provides one [_Domapic Ability_][domapic-service-abilities-url] for getting the state of the sensor, which generates one extra API resource:
 
 * `/api/abilities/contact-sensor/state` - Returns the current state of the sensor.
 

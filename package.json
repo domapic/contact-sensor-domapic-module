@@ -1,6 +1,6 @@
 {
   "name": "contact-sensor-domapic-module",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Domapic module for handling a contact sensor",
   "main": "server.js",
   "bin": {
@@ -12,7 +12,7 @@
     "domapic-contact-sensor": "./bin/domapic-contact-sensor"
   },
   "dependencies": {
-    "domapic-service": "1.0.0-alpha.4",
+    "domapic-service": "1.0.0-alpha.5",
     "gpio-in-domapic": "1.0.0"
   },
   "devDependencies": {
