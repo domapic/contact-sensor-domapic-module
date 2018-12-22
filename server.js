@@ -34,7 +34,7 @@ domapic.createModule({
       },
       state: {
         description: ABILITY_STATE_DESCRIPTION,
-        handler: () => !contactSensor.status
+        handler: () => contactSensor.status
       },
       event: {
         description: ABILITY_EVENT_DESCRIPTION
