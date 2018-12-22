@@ -85,6 +85,28 @@ suites:
           - test/functional/specs/api.specs.js
           - test/functional/specs/config.specs.js
       coverage: *disable-coverage
+    - name: api-and-config-reverse
+      describe: should init the contact sensor with provided configuration, and api should work as expected
+      before: *clean
+      services:
+        - name: module
+          abort-on-error: true
+          local:
+            <<: *local-service
+            env:
+              <<: *local-service-env
+              service_extra_options: --gpio=18 --debounce=3000 --reverse=true
+          docker:
+            <<: *docker-service
+            env:
+              <<: *docker-service-env
+              service_extra_options: --gpio=18 --debounce=3000 --reverse=true
+      test:
+        <<: *functional-test
+        specs:
+          - test/functional/specs/api-reverse.specs.js
+          - test/functional/specs/config-reverse.specs.js
+      coverage: *disable-coverage
     - name: api-and-config-cli
       describe: should init the contact sensor with provided configuration, and api should work as expected when started using cli
       before: *clean

@@ -5,6 +5,7 @@ const domapicService = require('domapic-service')
 const Mock = function () {
   let sandbox = test.sinon.createSandbox()
   let resolveStartCalled
+  let createModuleListener
 
   const resolveOnStartCalledPromise = new Promise(resolve => {
     resolveStartCalled = resolve
@@ -28,11 +29,16 @@ const Mock = function () {
     },
     errors: {
       BadGateway: sandbox.stub()
-    }
+    },
+    addPluginConfig: sandbox.stub().resolves()
   }
 
   const stubs = {
-    createModule: sandbox.stub(domapicService, 'createModule').resolves(moduleStubs),
+    createModule: sandbox.stub(domapicService, 'createModule').returns({
+      then: cb => {
+        createModuleListener = cb
+      }
+    }),
     cli: sandbox.stub(domapicService, 'cli').resolves(moduleStubs)
   }
 
@@ -47,7 +53,8 @@ const Mock = function () {
       module: moduleStubs
     },
     utils: {
-      resolveOnStartCalled: () => resolveOnStartCalledPromise
+      resolveOnStartCalled: () => resolveOnStartCalledPromise,
+      createModuleListener: dmpcModule => createModuleListener(dmpcModule)
     }
   }
 }

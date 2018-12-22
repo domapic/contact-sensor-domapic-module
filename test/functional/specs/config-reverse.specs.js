@@ -18,7 +18,7 @@ test.describe('module configuration', function () {
         test.expect(response.statusCode).to.equal(200),
         test.expect(response.body.debounce).to.equal(3000),
         test.expect(response.body.gpio).to.equal(18),
-        test.expect(response.body.reverse).to.equal(false)
+        test.expect(response.body.reverse).to.equal(true)
       ])
     })
   })

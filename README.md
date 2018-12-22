@@ -24,10 +24,10 @@ It can be used alone, but also can be connected to a [Domapic Controller][domapi
 npm i contact-sensor-domapic-module -g
 ```
 
-## Start the server
+## Usage
 
 ```bash
-domapic-contact-sensor start --gpio=12 --debounce=3000 --save
+domapic-contact-sensor start --gpio=12 --debounce=3000 --reverse=false --save
 ```
 
 The server will be started in background using [pm2][pm2-url].
@@ -44,6 +44,7 @@ The module, apart of all common [domapic services options][domapic-service-optio
 
 * `gpio` - Number defining the Gpio where the contact sensor to be controlled is connected.
 * `debounce` - Time in miliseconds to wait for before notifying about a change in the status of the contact sensor.
+* `reverse` - If `true`, the value of the gpio will be inverted when emitting event or returning state. Default is `false` (returns `true` when contact sensor detects contact, and `false` when not)
 
 ## Connection with Domapic Controller
 
@@ -61,7 +62,7 @@ Domapic modules are intended to be used through Domapic Controller, but can be u
 
 ### Rest API
 
-When the server is started, you can browse to the provided Swagger interface to get all the info about the api resources.  Apart of all api methods common to all [Domapic Services][domapic-service-url], the server provides one [_Domapic Ability_][domapic-service-abilities-url] for getting the state of the sendor, which generates one extra API resource:
+When the server is started, you can browse to the provided Swagger interface to get all the info about the api resources.  Apart of all api methods common to all [Domapic Services][domapic-service-url], the server provides one [_Domapic Ability_][domapic-service-abilities-url] for getting the state of the sensor, which generates one extra API resource:
 
 * `/api/abilities/contact-sensor/state` - Returns the current state of the sensor.
 
