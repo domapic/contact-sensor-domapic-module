@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [1.1.0] - 2018-12-22
 ### Added
 - Add default configuration for "homebridge-domapic-plugin"
+- Add reverse option
 
 ### Changed
 - Upgrade domapic-service version
