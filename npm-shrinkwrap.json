@@ -1,6 +1,6 @@
 {
   "name": "contact-sensor-domapic-module",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "lockfileVersion": 1,
   "requires": true,
   "dependencies": {
@@ -630,9 +630,12 @@
       "integrity": "sha512-DYWGk01lDcxeS/K9IHPGWfT8PsJmbXRtRd2Sx72Tnb8pcYZQFF1oSDb8hJtS1vhp212q1Rzi5dUf9+nq0o9UIg=="
     },
     "bindings": {
-      "version": "1.3.1",
-      "resolved": "https://registry.npmjs.org/bindings/-/bindings-1.3.1.tgz",
-      "integrity": "sha512-i47mqjF9UbjxJhxGf+pZ6kSxrnI3wBLlnGI2ArWJ4r0VrvDS7ZYXkprq/pLaBWYq4GM0r4zdHY+NNRqEMU7uew=="
+      "version": "1.5.0",
+      "resolved": "https://registry.npmjs.org/bindings/-/bindings-1.5.0.tgz",
+      "integrity": "sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ==",
+      "requires": {
+        "file-uri-to-path": "1.0.0"
+      }
     },
     "blessed": {
       "version": "0.1.81",
@@ -1475,12 +1478,19 @@
       }
     },
     "epoll": {
-      "version": "2.0.6",
-      "resolved": "https://registry.npmjs.org/epoll/-/epoll-2.0.6.tgz",
-      "integrity": "sha512-CtTAsX+Q+mpz6VHVtOSzbempais+FoDyrM6vBtvp+322YB93os/ZucdV8LTP4J1jZxaO1TPMSxWGKglc2P4PHA==",
+      "version": "2.0.8",
+      "resolved": "https://registry.npmjs.org/epoll/-/epoll-2.0.8.tgz",
+      "integrity": "sha512-j6n16OV/mbQOC0mk9xfCKvCC//SFFfcs+WICfEeiQQ8evpgr9PiZk81ZjC0hha/kaM6+7h+aLSPuNZiIjc0+Fg==",
       "requires": {
-        "bindings": "^1.3.0",
-        "nan": "^2.11.1"
+        "bindings": "^1.5.0",
+        "nan": "^2.12.1"
+      },
+      "dependencies": {
+        "nan": {
+          "version": "2.12.1",
+          "resolved": "https://registry.npmjs.org/nan/-/nan-2.12.1.tgz",
+          "integrity": "sha512-JY7V6lRkStKcKTvHO5NVSQRv+RV+FIL5pvDoLiAtSL9pKlC5x9PKQcZDsq7m4FO4d57mkhC6Z+QhAh3Jdk5JFw=="
+        }
       }
     },
     "error-ex": {
@@ -2876,12 +2886,20 @@
       "dev": true
     },
     "gpio-in-domapic": {
-      "version": "1.0.0",
-      "resolved": "https://registry.npmjs.org/gpio-in-domapic/-/gpio-in-domapic-1.0.0.tgz",
-      "integrity": "sha512-SNxYRKpSYlNcsgwgTul0YbTienUy3PU9xhIrzvaHXkH0/QRXmjqSEjmOeF7CYVYg6cP9JAszwUDNe2LQ0qYaMA==",
+      "version": "1.1.0",
+      "resolved": "https://registry.npmjs.org/gpio-in-domapic/-/gpio-in-domapic-1.1.0.tgz",
+      "integrity": "sha512-9IfTZFra3bYW+y6MzB9vLVuPsYXMWO2pxPTIDVd1DVArNVUtJBeHSlfliy8ZwUB+NzIj/jpErsd/ra2uMBgMjQ==",
       "requires": {
         "death": "1.1.0",
+        "lodash": "4.17.11",
         "onoff": "3.2.2"
+      },
+      "dependencies": {
+        "lodash": {
+          "version": "4.17.11",
+          "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.11.tgz",
+          "integrity": "sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg=="
+        }
       }
     },
     "graceful-fs": {
@@ -4257,7 +4275,8 @@
     "nan": {
       "version": "2.11.1",
       "resolved": "https://registry.npmjs.org/nan/-/nan-2.11.1.tgz",
-      "integrity": "sha512-iji6k87OSXa0CcrLl9z+ZiYSuR2o+c0bGuNmXdrhTQTakxytAFsC56SArGYoiHlJlFoHSnvmhpceZJaXkVuOtA=="
+      "integrity": "sha512-iji6k87OSXa0CcrLl9z+ZiYSuR2o+c0bGuNmXdrhTQTakxytAFsC56SArGYoiHlJlFoHSnvmhpceZJaXkVuOtA==",
+      "optional": true
     },
     "nanomatch": {
       "version": "1.2.13",
