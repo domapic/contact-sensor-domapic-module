@@ -16,10 +16,10 @@
     "gpio-in-domapic": "1.1.0"
   },
   "devDependencies": {
-    "coveralls": "3.0.2",
+    "coveralls": "3.0.3",
     "narval": "2.2.1",
     "request": "2.88.0",
-    "request-promise": "4.2.2"
+    "request-promise": "4.2.4"
   },
   "files": [
     "/lib",
